@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Warm Wood Grain Base Linear Gradient -->
+    <linearGradient id="woodBase" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F2CA85" />
+      <stop offset="18%" stop-color="#E5B263" />
+      <stop offset="35%" stop-color="#F9D490" />
+      <stop offset="52%" stop-color="#DAA350" />
+      <stop offset="70%" stop-color="#F2C77E" />
+      <stop offset="88%" stop-color="#E8B568" />
+      <stop offset="100%" stop-color="#DF9E47" />
+    </linearGradient>
+
+    <!-- Wood Fiber Noise / Streak Filters -->
+    <filter id="woodGrain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.015 0.25" numOctaves="4" result="noise" />
+      <feColorMatrix type="matrix" values="
+        0.8 0.1 0.1 0 0
+        0.1 0.7 0.1 0 0
+        0.1 0.1 0.4 0 0
+        0 0 0 0.35 0" in="noise" result="coloredNoise" />
+      <feBlend mode="multiply" in="SourceGraphic" in2="coloredNoise" />
+    </filter>
+
+    <linearGradient id="woodShine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF5E3" stop-opacity="0.25" />
+      <stop offset="50%" stop-color="#FFF0D0" stop-opacity="0" />
+      <stop offset="100%" stop-color="#B87825" stop-opacity="0.3" />
+    </linearGradient>
+  </defs>
+
+  <!-- Wood Grain Background with subtle border radius -->
+  <rect width="512" height="512" rx="32" fill="url(#woodBase)" />
+  <rect width="512" height="512" rx="32" fill="url(#woodBase)" filter="url(#woodGrain)" opacity="0.85" />
+
+  <!-- Subtle Horizontal Wood Fiber Lines -->
+  <g opacity="0.22" stroke="#8E5416" stroke-width="2" stroke-linecap="round">
+    <path d="M 0,64 Q 160,58 320,68 T 512,62" />
+    <path d="M 0,118 Q 200,126 380,114 T 512,122" />
+    <path d="M 0,180 Q 140,172 300,186 T 512,176" stroke-width="3" />
+    <path d="M 0,240 Q 180,248 360,236 T 512,244" />
+    <path d="M 0,296 Q 130,288 280,302 T 512,294" stroke-width="2.5" />
+    <path d="M 0,360 Q 210,368 410,354 T 512,364" />
+    <path d="M 0,428 Q 160,418 340,434 T 512,424" stroke-width="3" />
+    <path d="M 0,480 Q 240,488 440,476 T 512,482" />
+  </g>
+
+  <!-- Surface Light Overlay -->
+  <rect width="512" height="512" rx="32" fill="url(#woodShine)" />
+
+  <!-- The "H" in Dark Espresso Walnut Brown (#2A1B14) -->
+  <g fill="#2A1B14">
+    <!-- Left vertical bar of H -->
+    <rect x="0" y="124" width="75" height="264" />
+    <!-- Right vertical bar of H -->
+    <rect x="169" y="124" width="75" height="264" />
+    <!-- Horizontal crossbar of H -->
+    <rect x="74" y="217" width="96" height="66" />
+  </g>
+
+  <!-- The "T" in Terracotta / Burnt Rust Orange (#D84C1C) -->
+  <g fill="#D84C1C">
+    <!-- Top horizontal bar of T -->
+    <rect x="264" y="124" width="248" height="66" />
+    <!-- Vertical stem of T -->
+    <rect x="350" y="189" width="76" height="199" />
+  </g>
+</svg>

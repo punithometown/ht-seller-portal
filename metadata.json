@@ -1,0 +1,6 @@
+{
+  "name": "HomeTown Seller Panel",
+  "description": "Comprehensive seller portal for HomeTown furniture and homeware brand featuring product catalog, single and bulk CSV upload, client-specific order management, real-time inventory updates, analytics dashboard, and customer inquiry support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

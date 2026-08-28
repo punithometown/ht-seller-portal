@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    border-color: #E7DDD3;
+  }
+  body {
+    background-color: #F8F5F0;
+    color: #1F1610;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+}
+
+/* HomeTown Brand Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F3ECE2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D5C5B5;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B8A08A;
+}
